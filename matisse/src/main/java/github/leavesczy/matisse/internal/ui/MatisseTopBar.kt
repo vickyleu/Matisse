@@ -1,6 +1,8 @@
 package github.leavesczy.matisse.internal.ui
 
 import android.app.Activity
+import android.graphics.drawable.Icon
+import android.inputmethodservice.Keyboard
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -13,9 +15,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBackIos
-import androidx.compose.material.icons.filled.ArrowDropDown
+//import androidx.compose.material.icons.Icons
+//import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
@@ -29,9 +30,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -82,7 +85,7 @@ internal fun MatisseTopBar(matisse: Matisse, topBarViewState: MatisseTopBarViewS
                     .padding(start = 18.dp, end = 12.dp)
                     .fillMaxHeight()
                     .size(size = 22.dp),
-                imageVector = Icons.Filled.ArrowBackIos,
+                imageVector = ImageVector.vectorResource(id = R.drawable.arrow_back_ios),// Icons.Filled.ArrowBackIos,
                 tint = colorResource(id = R.color.matisse_top_bar_icon_color),
                 contentDescription = null
             )
@@ -97,7 +100,7 @@ internal fun MatisseTopBar(matisse: Matisse, topBarViewState: MatisseTopBarViewS
             )
             Icon(
                 modifier = Modifier.size(size = 32.dp),
-                imageVector = Icons.Filled.ArrowDropDown,
+                imageVector = ImageVector.vectorResource(id = R.drawable.arrow_drop_down),//Icons.Filled.ArrowDropDown,
                 tint = colorResource(id = R.color.matisse_top_bar_icon_color),
                 contentDescription = null
             )

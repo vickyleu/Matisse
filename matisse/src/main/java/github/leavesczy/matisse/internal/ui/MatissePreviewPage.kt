@@ -26,8 +26,8 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.SlowMotionVideo
+//import androidx.compose.material.icons.Icons
+//import androidx.compose.material.icons.filled.SlowMotionVideo
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -39,9 +39,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -137,7 +139,7 @@ internal fun MatissePreviewPage(
                                     }
                                     .padding(all = 20.dp)
                                     .size(size = 48.dp),
-                                imageVector = Icons.Filled.SlowMotionVideo,
+                                imageVector = ImageVector.vectorResource(id = R.drawable.slow_motion_video),//Icons.Filled.SlowMotionVideo,
                                 tint = colorResource(id = R.color.matisse_video_icon_color),
                                 contentDescription = mediaResource.name
                             )

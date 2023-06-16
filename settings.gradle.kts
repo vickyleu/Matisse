@@ -1,9 +1,9 @@
 @file:Suppress("UnstableApiUsage")
 pluginManagement {
     repositories {
-        google()
-        gradlePluginPortal()
-        mavenCentral()
+//        google()
+//        gradlePluginPortal()
+//        mavenCentral()
         maven {
             url = uri("https://mirrors.cloud.tencent.com/gradle/")
         }
@@ -28,8 +28,8 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
-        google()
-        mavenCentral()
+//        google()
+//        mavenCentral()
         maven {
             url = uri("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")
         }
@@ -38,5 +38,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Matisse"
 
-include(":app")
+//include(":app")
 include(":matisse")

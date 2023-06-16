@@ -64,22 +64,26 @@ android {
     }
 }
 
+//configurations.all {
+//    resolutionStrategy {
+//        exclude(group = "androidx.compose.material", module = "material-icons-extended")
+//    }
+//}
+
 dependencies {
     val composeUIVersion: String by properties
-    val junitVersion: String by properties
-    val junitExtVersion: String by properties
-    val espressoVersion: String by properties
     val appcompatVersion: String by properties
     val activityComposeVersion: String by properties
     val composeBomVersion: String by properties
     val composeMaterial3Version: String by properties
 
-    testImplementation("junit:junit:$junitVersion")
-    androidTestImplementation("androidx.test.ext:junit:$junitExtVersion")
-    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
     implementation("androidx.appcompat:appcompat:$appcompatVersion")
+    implementation("androidx.compose.foundation:foundation:$composeUIVersion")
     implementation("androidx.activity:activity-compose:$activityComposeVersion")
     implementation(platform("androidx.compose:compose-bom:$composeBomVersion"))
-    implementation("androidx.compose.material3:material3:$composeMaterial3Version")
-    implementation("androidx.compose.material:material-icons-extended:$composeUIVersion")
+    implementation("androidx.compose.material3:material3:$composeMaterial3Version"){
+        exclude(group = "androidx.compose.material", module = "material-icons-extended")
+        exclude(group = "androidx.compose.material", module = "material-icons-core")
+    }
+//    implementation("androidx.compose.material:material-icons-extended:$composeUIVersion")
 }

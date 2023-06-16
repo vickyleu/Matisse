@@ -13,9 +13,9 @@ import androidx.compose.foundation.lazy.grid.LazyGridItemScope
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PhotoCamera
-import androidx.compose.material.icons.filled.SlowMotionVideo
+//import androidx.compose.material.icons.Icons
+//import androidx.compose.material.icons.filled.PhotoCamera
+//import androidx.compose.material.icons.filled.SlowMotionVideo
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -31,9 +31,11 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.integerResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import github.leavesczy.matisse.Matisse
 import github.leavesczy.matisse.MediaResource
@@ -185,7 +187,7 @@ private fun LazyGridItemScope.MediaItem(
                 modifier = Modifier
                     .align(alignment = Alignment.Center)
                     .size(size = 32.dp),
-                imageVector = Icons.Filled.SlowMotionVideo,
+                imageVector = ImageVector.vectorResource(id = R.drawable.slow_motion_video),//Icons.Filled.SlowMotionVideo,
                 tint = colorResource(id = R.color.matisse_video_icon_color),
                 contentDescription = mediaResource.name
             )
@@ -208,7 +210,7 @@ private fun LazyGridItemScope.CaptureItem(onClick: () -> Unit) {
             modifier = Modifier
                 .fillMaxSize(fraction = 0.5f)
                 .align(alignment = Alignment.Center),
-            imageVector = Icons.Filled.PhotoCamera,
+            imageVector = ImageVector.vectorResource(id = R.drawable.photo_camera),//Icons.Filled.PhotoCamera,
             tint = colorResource(id = R.color.matisse_capture_icon_color),
             contentDescription = "Capture"
         )
