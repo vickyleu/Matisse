@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/vickyleu/Matisse.svg)](https://jitpack.io/#vickyleu/Matisse)
 
 ```
-implementation("com.github.vickyleu:Matisse:1.0.0-beta01")
+implementation("com.github.vickyleu:Matisse:1.0.1-beta01")
 ```
 
 一个用 Jetpack Compose 实现的 Android 图片/视频 选择框架
